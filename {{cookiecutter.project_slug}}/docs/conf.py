@@ -7,6 +7,7 @@ from sphinx_celery import conf
 
 globals().update(conf.build_config(
     '{{ cookiecutter.project_slug }}', __file__,
+    project='{{ cookiecutter.project_name }}',
     # version_dev='2.0',
     # version_stable='1.4',
     canonical_url='http://{{ cookiecutter.project_slug }}.readthedocs.org',
