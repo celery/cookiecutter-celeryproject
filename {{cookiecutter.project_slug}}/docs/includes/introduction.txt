@@ -1,0 +1,10 @@
+:Version: {{ cookiecutter.version }}
+:Web: http://{{ cookiecutter.project_slug }}.readthedocs.org/
+:Download: http://pypi.python.org/pypi/{{ cookiecutter.project_slug }}
+:Source: http://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
+:Keywords: KEYWORDS
+
+About
+=====
+
+# I'm too lazy to edit the defaults.

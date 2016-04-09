@@ -1,0 +1,14 @@
+.. _changelog:
+
+================
+ Change history
+================
+
+.. _version-{{ cookiecutter.version }}
+
+{{ cookiecutter.version }}
+=====
+:release-date: TBA
+:release-by:
+
+- Initial release
