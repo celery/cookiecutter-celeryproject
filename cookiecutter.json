@@ -5,5 +5,5 @@
     "project_short_description": "Boilerplate boilerplate",
     "pypi_username": "{{ cookiecutter.github_username }}",
     "year": "2016",
-    "version": "1.0.0",
+    "version": "1.0.0"
 }
