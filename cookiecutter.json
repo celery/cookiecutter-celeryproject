@@ -1,9 +1,10 @@
 {
+    "full_name": "Your Name",
+    "email": "you@example.com",
     "github_username": "celery",
     "project_name": "Boilerplate",
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "project_short_description": "Boilerplate boilerplate",
-    "pypi_username": "{{ cookiecutter.github_username }}",
     "year": "2016",
     "version": "1.0.0"
 }
