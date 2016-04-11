@@ -88,13 +88,13 @@ $(README):
 
 readme: clean-readme $(README) readmecheck
 
-contribclean:
-	-rm -f CONTRIBUTING.rst
+clean-contrib:
+	-rm -f "$(CONTRIBUTING)"
 
 $(CONTRIBUTING):
-	$(SPHINX2RST) "$(CONTRIBUTING_SRC)" --ascii > $@
+	$(SPHINX2RST) "$(CONTRIBUTING_SRC)" > $@
 
-contrib: contribclean $(CONTRIBUTING)
+contrib: clean-contrib $(CONTRIBUTING)
 
 clean-pyc:
 	-find . -type f -a \( -name "*.pyc" -o -name "*$$py.class" \) | xargs rm
