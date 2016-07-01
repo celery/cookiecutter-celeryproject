@@ -6,20 +6,29 @@
 
 from __future__ import absolute_import, unicode_literals
 
+import re
+
 from collections import namedtuple
 
-version_info_t = namedtuple(
-    'version_info_t', ('major', 'minor', 'micro', 'releaselevel', 'serial'),
-)
-
-VERSION = version_info = version_info_t(1, 0, 0, '', '')
-
-__version__ = '{0.major}.{0.minor}.{0.micro}{0.releaselevel}'.format(VERSION)
+__version__ = '{{ cookiecutter.version }}'
 __author__ = '{{ cookiecutter.full_name }}'
 __contact__ = '{{ cookiecutter.email }}'
 __homepage__ = 'https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}'
 __docformat__ = 'restructuredtext'
 
 # -eof meta-
+
+version_info_t = namedtuple(
+    'version_info_t', ('major', 'minor', 'micro', 'releaselevel', 'serial'),
+)
+
+# bumpversion can only search for {current_version}
+# so we have to parse the version here.
+_temp = re.match(
+    r'(\d+)\.(\d+).(\d+)(.+)?', __version__).groups()
+VERSION = version_info = version_info_t(
+    int(_temp[0]), int(_temp[1]), int(_temp[2]), _temp[3] or '', '')
+del(_temp)
+del(re)
 
 __all__ = []
