@@ -1,6 +1,7 @@
 PROJ={{ cookiecutter.project_slug }}
 PGPIDENT="Celery Security Team"
 PYTHON=python
+PYTEST=py.test
 GIT=git
 TOX=tox
 NOSETESTS=nosetests
@@ -9,6 +10,7 @@ FLAKE8=flake8
 FLAKEPLUS=flakeplus
 SPHINX2RST=sphinx2rst
 
+TESTDIR=t
 SPHINX_DIR=docs/
 SPHINX_BUILDDIR="${SPHINX_DIR}/_build"
 README=README.rst
@@ -81,13 +83,13 @@ configcheck:
 	(cd "$(SPHINX_DIR)"; $(MAKE) configcheck)
 
 flakecheck:
-	$(FLAKE8) --ignore=X999 "$(PROJ)"
+	$(FLAKE8) --ignore=X999 "$(PROJ)" "$(TESTDIR)"
 
 flakediag:
 	-$(MAKE) flakecheck
 
 flakepluscheck:
-	$(FLAKEPLUS) --$(FLAKEPLUSTARGET) "$(PROJ)"
+	$(FLAKEPLUS) --$(FLAKEPLUSTARGET) "$(PROJ)" "$(TESTDIR)"
 
 flakeplusdiag:
 	-$(MAKE) flakepluscheck
@@ -135,7 +137,7 @@ test:
 	$(PYTHON) setup.py test
 
 cov:
-	$(NOSETESTS) -xv --with-coverage --cover-html --cover-branch
+	$(PYTEST) -x --cov="$(PROJ)" --cov-report=html)
 
 build:
 	$(PYTHON) setup.py sdist bdist_wheel
