@@ -2,6 +2,8 @@
  {{ cookiecutter.project_short_description }}
 =====================================================================
 
+|build-status| |coverage| |license| |wheel| |pyversion| |pyimp|
+
 .. include:: ../includes/introduction.txt
 
 .. include:: ../includes/installation.txt
@@ -13,6 +15,18 @@
 .. |coverage| image:: https://codecov.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/coverage.svg?branch=master
     :target: https://codecov.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}?branch=master
 
-.. |bitdeli| image:: https://d2weczhvl823v0.cloudfront.net/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/trend.png
-    :alt: Bitdeli badge
-    :target: https://bitdeli.com/free
+.. |license| image:: https://img.shields.io/pypi/l/{{ cookiecutter.project_slug }}.svg
+    :alt: BSD License
+    :target: https://opensource.org/licenses/BSD-3-Clause
+
+.. |wheel| image:: https://img.shields.io/pypi/wheel/{{ cookiecutter.project_slug }}.svg
+    :alt: {{ cookiecutter.project }} can be installed via wheel
+    :target: http://pypi.python.org/pypi/{{ cookiecutter.project_slug }}/
+
+.. |pyversion| image:: https://img.shields.io/pypi/pyversions/{{ cookiecutter.project_slug }}.svg
+    :alt: Supported Python versions.
+    :target: http://pypi.python.org/pypi/{{ cookiecutter.project_slug }}/
+
+.. |pyimp| image:: https://img.shields.io/pypi/implementation/{{ cookiecutter.project_slug }}.svg
+    :alt: Support Python implementations.
+    :target: http://pypi.python.org/pypi/{{ cookiecutter.project_slug }}/
