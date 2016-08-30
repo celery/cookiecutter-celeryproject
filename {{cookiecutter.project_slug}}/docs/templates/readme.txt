@@ -20,7 +20,7 @@
     :target: https://opensource.org/licenses/BSD-3-Clause
 
 .. |wheel| image:: https://img.shields.io/pypi/wheel/{{ cookiecutter.project_slug }}.svg
-    :alt: {{ cookiecutter.project }} can be installed via wheel
+    :alt: {{ cookiecutter.project_slug }} can be installed via wheel
     :target: http://pypi.python.org/pypi/{{ cookiecutter.project_slug }}/
 
 .. |pyversion| image:: https://img.shields.io/pypi/pyversions/{{ cookiecutter.project_slug }}.svg
